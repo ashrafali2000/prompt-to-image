@@ -10,6 +10,7 @@ export default function Home() {
         <HeaderSection />
         <HeroSection />
       </div> */}
+      {/* bh */}
       <VideoGeneratedSection />
       </>  
   );
