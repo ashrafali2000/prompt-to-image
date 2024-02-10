@@ -3,6 +3,9 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import Footer from "@/components/footer";
 import HeaderSection from "@/components/headerSection";
+import { ImageContext } from "@/components/contextApi/imageContext";
+import { useState } from "react";
+import ImageProvider from "@/components/contextApi/imageProvider";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -19,9 +22,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <HeaderSection />
-        {children}
-        <Footer />
+        <ImageProvider>
+          <HeaderSection />
+          {children}
+          <Footer />
+        </ImageProvider>
       </body>
     </html>
   );
