@@ -1,10 +1,10 @@
-import HeaderSection from "@/components/headerSection";
+import HeroSection from "@/components/heroSection";
 
 export default function Home() {
   return (
     <main>
       <div className="">
-        <HeaderSection />
+        <HeroSection />
       </div>
     </main>
   );
