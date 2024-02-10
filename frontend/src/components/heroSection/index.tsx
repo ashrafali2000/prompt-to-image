@@ -65,9 +65,9 @@ export default function HeroSection() {
               ))}
             </div>
           </div>
-          <div className="h-full w-full px-2">
+          <div className="h-full w-full md:px-2">
             <div
-              className="h-[500px] lg:h-[710px] w-full bg-green relative z-50 rounded-2xl p-2"
+              className="h-[450px] md:h-[500px] lg:h-[710px] w-full bg-green relative z-50 rounded-2xl p-2"
               style={{
                 border: `4px solid #fff`,
                 transition: "border-width 2s ease-in-out",
@@ -171,9 +171,9 @@ export default function HeroSection() {
                   className="text-black relative z-20 bg-lightGray hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm lg:text-lg px-5 py-2.5 lg:py-3 lg:pr-10 text-center me-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 inline-flex items-center"
                 >
                   <span className="pr-6">Generating</span>
-                  <span className="absolute top-1/2 right-10 translate-y-[-50%] dot delay-300"></span>
-                  <span className="absolute top-1/2 right-9 translate-y-[-50%] dot delay-200"></span>
-                  <span className="absolute top-1/2 right-8 translate-y-[-50%] dot delay-100"></span>
+                  <span className="absolute top-1/2 right-6 lg:right-10 translate-y-[-50%] dot delay-300"></span>
+                  <span className="absolute top-1/2 right-5 lg:right-9 translate-y-[-50%] dot delay-200"></span>
+                  <span className="absolute top-1/2 right-4 lg:right-8 translate-y-[-50%] dot delay-100"></span>
                 </button>
 
                 <div

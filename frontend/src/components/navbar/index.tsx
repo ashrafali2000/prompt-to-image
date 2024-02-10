@@ -1,9 +1,26 @@
 "use client";
 import Link from "next/link";
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 export default function NavBar() {
   const [toggle, setToggle] = useState<boolean>(false);
+  const dropdownRef = useRef<HTMLDivElement>(null);
+  const handleClickOutside = (event: MouseEvent) => {
+    if (
+      dropdownRef.current &&
+      !dropdownRef.current.contains(event.target as Node)
+    ) {
+      setToggle(false);
+    }
+  };
+
+  useEffect(() => {
+    document.addEventListener("click", handleClickOutside);
+
+    return () => {
+      document.removeEventListener("click", handleClickOutside);
+    };
+  }, [toggle]);
   return (
     <nav className="border-gray-200 z-50 md:z-30 relative">
       <div className="flex md:flex-wrap items-end justify-between mx-auto md:px-4 lg:px-0 py-2 md:py-4">
@@ -52,7 +69,7 @@ export default function NavBar() {
             </li>
             <li>
               <Link
-                href="#"
+                href="/"
                 className="block py-2 px-3 rounded  md:border-0 md:hover:text-blue-700 md:p-0 text-white"
               >
                 Text to image
@@ -95,9 +112,12 @@ export default function NavBar() {
       </div>
       {/* toggle */}
       {toggle && (
-        <div>
-          <div className="absolute top-12 z-50 w-full">
-            <ul className="flex flex-col p-4 mt-4 font-medium border border-green-200 rounded-lg bg-black">
+        <div
+          ref={dropdownRef}
+          className="absolute top-16 z-30 rounded w-full border border-lightGreen"
+        >
+          <div className="w-full">
+            <ul className="flex flex-col p-2 mt-4 font-medium border border-green-200 rounded-lg bg-black">
               <li>
                 <Link
                   onClick={() => setToggle(!toggle)}
@@ -111,23 +131,23 @@ export default function NavBar() {
               <li>
                 <Link
                   onClick={() => setToggle(!toggle)}
-                  href="/our-department/disaster"
+                  href="/"
                   className="block py-2 px-3 text-white font-semibold "
                   aria-current="page"
                 >
-                  Feed
+                  Text to image
                 </Link>
               </li>
               <li>
                 <Link
                   onClick={() => setToggle(!toggle)}
-                  href="/appeal"
+                  href="/text-to-video"
                   className="block py-2 px-3 text-white font-semibold "
                 >
-                  Styles
+                  Text to video
                 </Link>
               </li>
-              <li>
+              {/* <li>
                 <Link
                   onClick={() => setToggle(!toggle)}
                   href="/donation"
@@ -144,7 +164,7 @@ export default function NavBar() {
                 >
                   Bookmarks
                 </Link>
-              </li>
+              </li> */}
               <hr className="my-4 h-[2px] border-t-0 bg-transparent bg-gradient-to-r from-transparent via-green-200 to-transparent opacity-25" />
             </ul>
           </div>
