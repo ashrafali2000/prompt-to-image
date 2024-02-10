@@ -24,7 +24,7 @@ export default function NavBar() {
   return (
     <nav className="border-gray-200 z-50 md:z-30 relative">
       <div className="flex md:flex-wrap items-end justify-between mx-auto md:px-4 lg:px-0 py-2 md:py-4">
-        <Link href="https://flowbite.com/" className="flex items-end">
+        <Link href="/" className="flex items-end">
           <img
             src="/Assests/homeAssests/logonew.png"
             className="h-12 md:h-16 lg:h-20"

@@ -6,10 +6,10 @@ export default function Footer() {
       <footer className="max-w-screen-xl  px-4  lg:px-10 xl:px-14 py-6 lg:py-8 mx-auto">
         <div className="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
           <div>
-            <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">
+            <h2 className="mb-6 text-sm font-semibold text-white uppercase">
               Our Sites:
             </h2>
-            <ul className="text-gray-500 dark:text-gray-400 font-medium">
+            <ul className="text-white  font-medium">
               <li className="mb-4">
                 <Link
                   href="https://bawdicsoft.com/"
@@ -22,15 +22,12 @@ export default function Footer() {
             </ul>
           </div>
           <div>
-            <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">
+            <h2 className="mb-6 text-sm font-semibold text-white uppercase ">
               Follow us:
             </h2>
-            <ul className="text-gray-500 dark:text-gray-400 font-medium">
+            <ul className="text-white font-medium">
               <li className="mb-4 flex gap-5">
-                <a
-                  href="#"
-                  className="text-gray-500 hover:text-gray-900 dark:hover:text-white ms-5"
-                >
+                <a href="#" className="text-white hover:text-gray-900  ms-5">
                   <svg
                     className="w-4 h-4"
                     aria-hidden="true"
@@ -46,10 +43,7 @@ export default function Footer() {
                   </svg>
                   <span className="sr-only">Twitter page</span>
                 </a>
-                <a
-                  href="#"
-                  className="text-gray-500 hover:text-gray-900 dark:hover:text-white"
-                >
+                <a href="#" className="text-gray-500 hover:text-gray-900 ">
                   <svg
                     className="w-4 h-4"
                     aria-hidden="true"
