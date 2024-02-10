@@ -78,18 +78,17 @@ const VideoGeneratedSection = () => {
           Save
         </button>
       </div>
-      {/* 
- <div>
-      <li className="bg-[#CEFAE5]">Top</li>
-      <li className="bg-[#514A4A]">Top</li>
-      <li className="bg-[#FFFFFF]">Top</li>
-      <li className="bg-[#000000]">Top</li>
-      <li className="bg-[#DCD8F8]">Top</li>
-      <li className="bg-[#076857]">Top</li>
-      <li className="bg-[#B8EEEB]">Top</li>
-      <li className="bg-[#0B1618]">Top</li>
-      </div>
-      */}
+
+      {/* <div>
+        <li className="bg-[#CEFAE5]">Top</li>
+        <li className="bg-[#514A4A]">Top</li>
+        <li className="bg-[#FFFFFF]">Top</li>
+        <li className="bg-[#000000]">Top</li>
+        <li className="bg-[#DCD8F8]">Top</li>
+        <li className="bg-[#076857]">Top</li>
+        <li className="bg-[#B8EEEB]">Top</li>
+        <li className="bg-[#0B1618]">Top</li>
+      </div> */}
     </div>
   );
 };
